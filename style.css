@@ -23,6 +23,11 @@
   font-family: Verdana, sans-serif;
 }
 
+/* Global */
+a{
+  color: #148E41;
+}
+
 /* Header */
 .item1 img{
   width: 20%;
@@ -30,7 +35,7 @@
 
 /* Navigation */
 
-.item2 ul{
+.item2 ul, .item3 ul{
   list-style-type: none;
 }
 
