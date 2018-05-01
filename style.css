@@ -41,51 +41,65 @@
 .item2 a{
   text-decoration: none;
   color: #ff0000;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+@media all and (max-width:600px){
+  .item2 a{
+    font-size: .8em;
+  }
 }
 
 /* Body / Content */
 
 .section{
   width: 100%;
-  height: auto;
+  padding: 20px;
   padding: 12em 0 12em 0;
 }
 
-#home{
-  background: white;
+#home, #projects{
+  background: #ffffff;
+  color: #000000;
 }
 
-#about{
-  background: green;
+#about, #contact{
+  background: #000000;
+  color: #ffffff;
 }
 
-#projects{
-    background: blue;
-}
-
-#contact{
-  background: orange;
-}
 
 .contact-form input, textarea{
   float: right;
   margin-right: 30%;
   padding: 5px;
+  height: 3em;
+  width: 20em;
   border: 1px solid #1c1c1c;
+  font-size: .5em;
 }
 
-.contact-form label{
-  margin-left: 40%;
+.contact-panel{
+  width: 100%;
+  /* font-size: 1.5em; */
+}
+
+@media all and (min-width:600px){
+  .contact-panel{
+    font-size: 1.5em;
+  }
 }
 
 #backbtn{
   background-image: url("images/btt-button.png");
   background-repeat: no-repeat;
   background-size: 64px 64px;
+  background-color: #ffffff;
   width: 64px;
   height: 64px;
   opacity: .5;
   position: fixed;
-  top: 90%;
-  left: 90%;
+  top: 80%;
+  left: 80%;
 }
