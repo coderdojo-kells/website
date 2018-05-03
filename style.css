@@ -35,6 +35,11 @@ a{
 
 /* Navigation */
 
+#nav {
+ display:flex;
+ justify-content:space-evenly;
+}
+
 .item2 ul, .item3 ul{
   list-style-type: none;
 }
