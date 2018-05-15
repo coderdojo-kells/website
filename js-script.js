@@ -105,3 +105,17 @@ function validateMsg(msg){
     return true;
   }
 }
+
+function sendMail(){
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      document.getElementById('sendstatus').innerHTML = this.responseText;
+    }
+  };
+
+  xhttp.open('POST', 'scripts/mail.php?fullname='+ nameField.value + '&phone=' + phoneField.value + '&email=' + emailField.value + '&message=' + msgField.value, false);
+  xhttp.send();
+
+}
