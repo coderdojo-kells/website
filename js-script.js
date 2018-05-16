@@ -2,7 +2,11 @@ var nameField = document.getElementById('fullname');
 var phoneField = document.getElementById('phone');
 var emailField = document.getElementById('email');
 var msgField = document.getElementById('message');
+var captchaField = document.getElementById('captcha');
 var submitBtn = document.getElementById('submit-query');
+
+var capQu1 = document.getElementById('captcha-qu1');
+var capQu2 = document.getElementById('captcha-qu2');
 
 nameField.onblur = function(){
   validateName(nameField.value);
@@ -20,9 +24,14 @@ msgField.onblur = function(){
   validateMsg(msgField.value);
 };
 
+captchaField.onblur = function(){
+  validateCaptcha(captchaField.value);
+}
+
 setInterval(function(){
   if(validateName(nameField.value) && validatePhone(phoneField.value)
-        && validateEmail(emailField.value) && validateMsg(msgField.value)){
+        && validateEmail(emailField.value) && validateMsg(msgField.value)
+          && validateCaptcha(captchaField.value)){
 
             submitBtn.removeAttribute('disabled');
   }
@@ -106,6 +115,18 @@ function validateMsg(msg){
   }
 }
 
+function validateCaptcha(captcha){
+  if(!captcha.match(/[0-9]/g) || captcha.match(/[@!?£$%^<>&()+]/g)){
+    // alert('Phone field must contain numeric characters.');
+    captchaField.style.border = '3px solid red';
+    captchaField.style.color = 'red';
+  }else{
+    captchaField.style.border = '3px solid green';
+    captchaField.style.color = 'green';
+    return true;
+  }
+}
+
 function sendMail(){
 
   var xhttp = new XMLHttpRequest();
@@ -115,7 +136,19 @@ function sendMail(){
     }
   };
 
-  xhttp.open('POST', 'scripts/mail.php?fullname='+ nameField.value + '&phone=' + phoneField.value + '&email=' + emailField.value + '&message=' + msgField.value, false);
+  xhttp.open('POST', 'scripts/mail.php?fullname='+ nameField.value + '&phone=' + phoneField.value + '&email=' + emailField.value + '&message=' + msgField.value + '&captcha=' + captchaField.value + '&qu1=' + capQu1.value + '&qu2=' + capQu2.value, false);
   xhttp.send();
 
 }
+
+function generateCaptcha(){
+  var captchaNum = Math.floor(Math.random() * 10) + 11;
+  var captchaDigits = String(captchaNum).split('');
+  var captchaSum = Number(captchaDigits[0]) + Number(captchaDigits[1]);
+
+  document.getElementById('captcha-problem').innerHTML = captchaDigits[0] +' + '+ captchaDigits[1];
+  document.getElementById('captcha-qu1').value = captchaDigits[0];
+  document.getElementById('captcha-qu2').value = captchaDigits[1];
+}
+
+generateCaptcha();

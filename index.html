@@ -85,6 +85,14 @@
               <textarea type="text" name="message" id="message"> </textarea>
 
               <br/><br/>
+
+              <label for="captcha">Are you human? <span id="captcha-problem"></span></label>
+              <input type="text" name="captcha" id="captcha" placeholder="Solve the math problem to the left">
+              <input type="hidden" name="captcha-qu1" id="captcha-qu1">
+              <input type="hidden" name="captcha-qu2" id="captcha-qu2">
+
+
+              <br/><br/>
               <input type="submit" name="submit-query" id="submit-query" value="Send" disabled>
             </form>
 
