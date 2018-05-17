@@ -34,6 +34,8 @@ setInterval(function(){
           && validateCaptcha(captchaField.value)){
 
             submitBtn.removeAttribute('disabled');
+  }else{
+    submitBtn.setAttribute('disabled', true);
   }
 },1000);
 
@@ -144,7 +146,7 @@ function sendMail(){
 function generateCaptcha(){
   var captchaNum = Math.floor(Math.random() * 10) + 11;
   var captchaDigits = String(captchaNum).split('');
-  var captchaSum = Number(captchaDigits[0]) + Number(captchaDigits[1]);
+  // var captchaSum = Number(captchaDigits[0]) + Number(captchaDigits[1]);
 
   document.getElementById('captcha-problem').innerHTML = captchaDigits[0] +' + '+ captchaDigits[1];
   document.getElementById('captcha-qu1').value = captchaDigits[0];
