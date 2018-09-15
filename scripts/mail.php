@@ -11,7 +11,7 @@ $captchaQu1 = $_GET['qu1'];
 $captchaQu2 = $_GET['qu2'];
 $captchaSol = $captchaQu1 + $captchaQu2;
 
-$mailTo = "administrator@heylinhosting.com";
+$mailTo = "info@coderdojokells.com";
 $mailFrom = "noreply@heylinhosting.com";
 
 // email message contents
