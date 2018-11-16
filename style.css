@@ -79,6 +79,18 @@ a{
   color: #ffffff;
 }
 
+.supporterlogo{
+  width: 10%;
+}
+
+.techlogo{
+  width: 100%;
+  float: left;
+}
+
+.techlogo img{
+  width: 100px;
+}
 
 .contact-form input, textarea{
   float: right;
