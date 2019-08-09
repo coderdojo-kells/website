@@ -12,7 +12,7 @@ $captchaQu2 = $_GET['qu2'];
 $captchaSol = $captchaQu1 + $captchaQu2;
 
 $mailTo = "info@coderdojokells.com";
-$mailFrom = "noreply@heylinhosting.com";
+$mailFrom = "noreply@coderdojokells.com";
 
 // email message contents
 $subject = "New message from $sender";
@@ -29,7 +29,7 @@ if(isset($captchaAns)){
     echo 'Something went wrong. Your has not been message sent. Please try again';
   }
 }else{
-  header('Location: http://kellscoderdojo.heylinhosting.com/error-pages/403.html');
+  header('Location: https://www.coderdojokells.com/error-pages/403.html');
   die();
 }
 
