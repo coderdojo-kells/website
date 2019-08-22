@@ -1,0 +1,36 @@
+body{
+  font-family: 'Arial', sans-serif;
+  width: 800px;
+  margin: 0px auto;
+}
+
+#registration-page{
+  width: 95%;
+  margin: 0px auto;
+  display: block;
+}
+
+#registration-form{
+  width: 700px;
+  margin: 0px auto;
+}
+
+#event-page{
+  width: 95%;
+  margin: 0px auto;
+  display: block;
+}
+
+#logo{
+  width: 200px;
+  margin: 0px auto;
+  display: block;
+}
+
+#eventbanner{
+  width: 750px;
+}
+
+h1, p{
+  text-align: center;
+}
