@@ -1,6 +1,6 @@
+/* .item5 { grid-area: social; } */
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
-.item5 { grid-area: social; }
 .item3 { grid-area: body; }
 .item4 { grid-area: footer; }
 
@@ -64,12 +64,16 @@ a{
 }
 
 /* Social */
-.item5 #socialbuttons{
-  width: 55px;
-  height: 180px;
+#socialbuttons{
+  width: 12%;
+  height: 200px;
   padding: 5px;
-  background-color: #ffffff;
+  background-color: allowtransparency;
   position: fixed;
+  top: 17px;
+  left: 17px;
+  border: solid .5px #888;
+  color: red;
 }
 
 .item5 #socialbuttons img{
@@ -132,7 +136,7 @@ a{
 }
 
 #backbtn{
-  background-image: url("images/btt-button.png");
+  background-image: url("../images/btt-button.png");
   background-repeat: no-repeat;
   background-size: 64px 64px;
   background-color: #ffffff;
