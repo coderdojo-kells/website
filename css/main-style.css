@@ -54,7 +54,7 @@ a{
   text-decoration: none;
   color: #ff0000;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 @media all and (max-width:600px){
@@ -68,12 +68,16 @@ a{
   width: 12%;
   height: 220px;
   padding: 5px;
-  background-color: allowtransparency;
+  background-color: #fff; /*allowtransparency;*/
   position: fixed;
   top: 17px;
   left: 17px;
   border: solid .5px #888;
   color: red;
+}
+
+#yticon{
+  width: 100px;
 }
 
 .item5 #socialbuttons img{
